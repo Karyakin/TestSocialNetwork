@@ -28,7 +28,6 @@ namespace API.Controllers
         [HttpGet("U2")]
         public ActionResult GetUsers(int a)//  Тип ActionResult позволяет возвращать из метода коды с котороми отрабатывает метод
         {
-          
             return BadRequest("Пришел тип инт");
         }
 

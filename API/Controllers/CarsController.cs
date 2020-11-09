@@ -15,6 +15,8 @@ namespace API.Controllers
         public CarsController(DataContext dataContext)
         {
             _dataContext = dataContext;
+
+
         }
 
         public ActionResult GetRez()
