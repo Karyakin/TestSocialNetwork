@@ -31,5 +31,10 @@ namespace API.Controllers
           
             return BadRequest("Пришел тип инт");
         }
+
+        public ActionResult GetUsers()
+        {
+            return BadRequest("Empty");
+        }
     }
 }
