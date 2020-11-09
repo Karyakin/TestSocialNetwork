@@ -35,5 +35,10 @@ namespace API.Controllers
             })
             .ToArray();
         }
+
+        public string GetString(string str)
+        {
+            return str;
+        }
     }
 }
