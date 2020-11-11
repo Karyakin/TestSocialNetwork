@@ -19,45 +19,8 @@ namespace API.Controllers
 
         }
 
-        public ActionResult GetRez()
-        {
+        
 
-            return Ok("Return OK");
-        }
-
-
-        [HttpGet("U1")]
-        public IActionResult GetRex()
-        {
-            return Ok("Return OK by Interface");
-        }
-
-        [HttpGet("U2")]
-        public IActionResult GetStatusCode()
-        {
-            return StatusCode(401);
-        }
-
-        [HttpGet("U3")]
-        public IActionResult GetContent()
-        {
-            return Content("GetContent");
-        }
-
-        [HttpGet("U4")]
-        public IActionResult NotFoundResult()
-        {
-            return NotFound("NotFound");
-        }
-
-        [HttpGet("U5")]
-        public IActionResult UnauthorizedResult(int a)
-        {
-            if (a < 18)
-                return Unauthorized();
-            return Content("All Right");
-
-
-        }
+        
     }
 }
