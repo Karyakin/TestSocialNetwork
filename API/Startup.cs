@@ -2,7 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using API.Controllers;
 using API.Data;
+using API.Data.Reposytory;
+using API.Entities;
 using API.Interfaceses;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -34,6 +37,10 @@ namespace API
             });
             services.AddControllers();
             services.AddScoped<IUserReposytiry, UserRepository>();
+            services.AddScoped<ICarRepository, CarRepository>();
+            services.AddScoped<ICarRepository, CarRepository>();
+            services.AddScoped<IGenericRepository<Animal>, AnimalRepository<Animal>>();
+         
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

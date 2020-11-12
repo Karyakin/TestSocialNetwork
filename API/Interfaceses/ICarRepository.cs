@@ -5,10 +5,10 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace API.Interfaceses
-{
-   public interface IUserReposytiry  
+{ 
+   public interface ICarRepository
     {
-        IEnumerable<User> GetUsers();
-        User GetUser(long id);
+        IEnumerable<Car> GetCars();
+        Car GetCar(long id);
     }
 }

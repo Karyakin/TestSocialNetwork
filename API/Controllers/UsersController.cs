@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
-      public class UsersController : BaseApiController//в этом классе все атрибуты + он наследуется от BaseController
+    public class UsersController : BaseApiController//в этом классе все атрибуты + он наследуется от BaseController
     {
         private readonly DataContext _dataContext;
         private readonly IUserReposytiry _userReposytiry;
@@ -19,43 +19,16 @@ namespace API.Controllers
         {
             _dataContext = dataContext;
             _userReposytiry = userReposytiry;
-        } 
-        [HttpGet]
-        public IEnumerable<User>GetUsers()
-        {
-            return _userReposytiry.GetUsers();
         }
+
+        [HttpGet]
+        public IEnumerable<User> GetUsers() => _userReposytiry.GetUsers();
+
 
         [HttpGet("{id}")]
-        public User GetUsers(long id)
-        {
-            return _userReposytiry.GetUser(id);
+        public User GetUsers(long id) => _userReposytiry.GetUser(id);
 
-        }
+     
 
-
-
-
-
-
-
-        /*
-               [HttpGet("U1")]
-                public ActionResult GetUsers(string a)//  Тип ActionResult позволяет возвращать из метода коды с котороми отрабатывает метод
-                {
-                    return BadRequest(a);
-                }
-
-
-                [HttpGet("U2")]
-                public ActionResult GetUsers(int a)//  Тип ActionResult позволяет возвращать из метода коды с котороми отрабатывает метод
-                {
-                    return BadRequest("Пришел тип инт");
-                }
-
-                public ActionResult GetUsers()
-                {
-                    return BadRequest("Empty");
-                }*/
     }
 }
