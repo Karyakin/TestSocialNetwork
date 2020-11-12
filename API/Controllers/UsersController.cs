@@ -29,10 +29,11 @@ namespace API.Controllers
             return _userReposytiry.GetUsers();
         }
 
-        [HttpGet("user/{id}")]
+        [HttpGet("{id}")]
         public User GetUsers(long id)
         {
             return _userReposytiry.GetUser(id);
+
         }
 
 
