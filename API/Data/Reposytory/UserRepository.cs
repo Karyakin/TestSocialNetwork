@@ -1,6 +1,6 @@
 ﻿using API.Entities;
 using API.Interfaceses;
-using System;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,11 +14,8 @@ namespace API.Data
         {
             _context = context;
         }
-        public User GetUser(long id)
-        {
-           return _context.Users.SingleOrDefault(x => x.Id == id);
-        }
 
-        public IEnumerable<User> GetUsers() => _context.Users;
+        public async Task<IEnumerable<User>> GetUsersAsync() => await _context.Users.ToListAsync();
+        public async Task<User> GetUserAsync(long id) => await _context.Users.SingleOrDefaultAsync(x => x.Id == id);
     }
 }

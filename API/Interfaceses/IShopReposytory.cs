@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace API.Interfaceses
 {
-    public interface IUserReposytiry
+   public interface IShopReposytory<TEntity> : IGenericRepository<TEntity> where TEntity : Shop
     {
-        Task<IEnumerable<User>> GetUsersAsync();
-        Task<User> GetUserAsync(long id);
+        public Task<IEnumerable<TEntity>> GetByName(string name);
     }
 }

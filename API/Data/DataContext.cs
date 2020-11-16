@@ -18,5 +18,7 @@ namespace API.Data
         public DbSet<Shop> Shops { get; set; }
         public DbSet <Animal> Animals { get; set; }
         public DbSet<Car> Cars { get; set; }
+        public DbSet<Train> Trains { get; set; }
+        public DbSet<Photo> Photos { get; set; }
     }
 }
