@@ -155,8 +155,16 @@ namespace API.Data.Migrations
                     b.Property<string>("Login")
                         .HasColumnType("nvarchar(max)");
 
+<<<<<<< HEAD
                     b.Property<string>("LookingFor")
                         .HasColumnType("nvarchar(max)");
+=======
+                    b.Property<byte[]>("PasswordHash")
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<byte[]>("PasswordSalt")
+                        .HasColumnType("varbinary(max)");
+>>>>>>> 1d0166b709d4b0466e20656b5fbf2d57d96a8618
 
                     b.Property<byte[]>("PasswordHash")
                         .HasColumnType("varbinary(max)");

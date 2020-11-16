@@ -38,12 +38,18 @@ namespace API
             services.AddControllers();
             services.AddScoped<IUserReposytiry, UserRepository>();
             services.AddScoped<ICarRepository, CarRepository>();
+<<<<<<< HEAD
            
             services.AddScoped<IEnimalRepository<Animal>, AnimalRepository>();
             services.AddScoped<IShopReposytory<Shop>, ShopRepository>();
             services.AddScoped<ITrainsReposytory<Train>, TrainRepository>();
 
            // services.AddScoped(typeof(IGenericRepository<>), typeof(AnimalRepository<>));
+=======
+            services.AddScoped<ICarRepository, CarRepository>();
+            services.AddScoped<IGenericRepository<Animal>, AnimalRepository<Animal>>();
+         
+>>>>>>> 1d0166b709d4b0466e20656b5fbf2d57d96a8618
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
